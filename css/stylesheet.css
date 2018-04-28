@@ -1,0 +1,701 @@
+/*
+Project: ITA Assignment Ecomerce Website;
+Topic: Baby Items Online Shop;
+Theme Colors: Background Green #1BBC9B, Blue #2D3E50, Light Blue #4E646F, Light white #efefef, White #0000;
+*/
+
+
+/*
+TABLE OF CONTENTS
+----------------------
+
+1. General Styling
+2. Menu Styling
+3. Homepage Styling
+4. Item Listing Styling
+5. Admin Side Menu
+6. Account Styling
+7. Item Details Page
+8. FORMS Styling
+9. Table Styling
+10. Shopping Bag
+11. User Registration and Login
+12. Bill Page
+13. Footer
+14. About Us Page
+*/
+
+
+/*
+1. General Styling
+---------------------*/
+
+body{
+	background-color: #1BBC9B;
+	font-family: 'Open Sans', sans-serif;
+}
+.nopadding{
+	padding: 0px;
+}
+.nomargin{
+	margin: 0px;
+}
+.mt-5{
+	margin-top: 5px
+}
+.mt-10{
+	margin-top: 10px;
+}
+.container{
+	background-color: white;
+}
+.colorblk{
+	color: #333;
+}
+
+/*Button Styling*/
+.btn-primary{
+	background-color:#2D3E50; 
+}
+.btn-primary:hover{
+	background-color:#4E646F; 
+}
+.btn, .btn-danger{
+	border:none;
+}
+.btn>a{
+	color: white;
+	text-decoration: none;
+}
+
+/*2. Menu
+---------------------*/
+.navbar{
+	margin-bottom: 5px;
+	background-color: #2D3E50;
+	border:none;
+}
+.navbar .container{
+	background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a{
+	color:#efefef;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color:white;
+}
+.navbar-default .navbar-nav>.active>a{
+	background-color: #4E646F;
+	color: white;
+}
+.navbar-default .navbar-brand{
+	color:#efefef;
+}
+.navbar-default .navbar-brand:hover {
+	color: white;
+}
+.navbar-right li a{
+	padding: 10px 10px 5px 10px;
+}
+.navbar-default .navbar-toggle{
+	border-color: white;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: white;
+}
+#avatar{
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin:5px;
+	cursor: pointer;
+}
+
+.number{
+	display: block;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    top: 25px;
+    right: 5px;
+}
+#cartseek{
+	padding-left: 10px;
+}
+#cartseek>li{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 150px;
+}
+.dropdown-menu .divider{
+	margin: 0px;
+}
+.checkoutbtn{
+	padding: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    border-radius: 0px;
+    border: none;
+}
+@media screen and (max-width: 767px){
+
+	.navbar-right{
+		margin: 7.5px -15px;
+	    position: absolute;
+	    top: -5px;
+	    right: 85px;
+	    margin-top: 0px;
+	}
+	.navbar-right>li{
+		display: inline-block;
+	}
+	.navbar-right .open .dropdown-menu{
+		    position: absolute;
+		    left: -150px;
+		    border:1px solid rgba(0,0,0,.15);
+		    background-color: white;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color: white;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus{
+		background-color: #4E646F;
+		color:white;
+	}
+}
+
+#breadcrum{
+	background-color: #4E646F;
+	padding: 5px;
+	margin-bottom: 5px;
+	font-weight: 300;
+	margin-top: 55px;
+	color: white;
+}
+#breadcrum .container{
+	background-color: transparent;
+}
+#breadcrum ul{
+	margin:0px;
+}
+#breadcrum li{
+	display: inline;
+	list-style: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#breadcrum li:after{
+	content: ">>";
+	padding-right: 3px;
+	padding-left: 3px;
+}
+#breadcrum li:last-child:after{
+	content: "";
+}
+
+/*
+3. HomePage
+----------------*/
+.sideimg{
+	padding-left: 10px;
+	padding-right: 0;
+}
+.sideimg img{
+	width: 100%;
+}
+.searchbox{
+	margin: 10px 0px;
+    padding: 20px;
+    height: 70px;
+    background-color: white;
+}
+.searchbox input[type=text]{
+	width: 80%;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid;
+    border-radius: 10px 0px 0px 10px;
+    border-right: none;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+}
+.searchbox select{
+	width: 15%;
+    height: 50px;
+    border: 2px solid;
+    border-left: none;
+    border-radius: 0px 10px 10px 0px;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+#homeSlider2 img{
+	height: 250px;
+	width: 100%;
+}
+#homeSlider2 h4{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#homeSlider2 .info{
+	background-color: white;
+	margin-top: -10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+#btn_search{
+	position: absolute;
+	top: 28px;
+	right: 225px;
+	color: #333;
+	opacity: 0.7;
+	background-color: transparent;
+	border:none;
+
+}
+.heading{
+	background-color: white;
+	padding: 5px 0px 5px 15px;
+	margin-bottom: 10px;
+}
+.heading h4{
+	font-weight: 600;
+}
+.homemod img{
+	margin-bottom:10px;
+}
+
+@media screen and (max-width: 991px){
+
+	#btn_search{
+		right: 150px;
+	}
+}
+@media screen and (max-width: 760px){
+	#btn_search{
+		right: 120px;
+	}
+}
+
+/*
+4. Item Listing
+------------------*/ 
+.filter_form{
+	background-color: white;
+	padding: 10px;
+	margin: 5px;
+}
+.heading-panel {
+	width: 100%;
+	padding: 10px;
+	border:none;
+	background-color: #4E646F;
+	text-align: left;
+	font-size: 15px;
+	font-weight: 600;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	color: white;
+}
+
+#filter{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.listing{
+	margin: 10px 10px 0px 10px;
+	background-color: white;
+	padding: 0;
+}
+.listing a{
+	text-decoration: none;
+	color:#333 ;
+}
+.overlay{
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	transition: 0.6s;
+	-webkit-transition: 0.6s;
+}
+.listing:hover .overlay{
+	opacity: 1;
+}
+#slider-price{
+	width: 60%;
+}
+#price .slider-selection{
+	background:#4E646F;
+}
+#price .slider-handle{
+	background-color: #2D3E50;
+}
+
+
+/*5.Admin Side Menu
+----------------*/
+
+.sidemenu{
+	background-color: #2D3E50;
+	text-align: center;
+	color: white;
+	padding-bottom: 25px;
+}
+.sidemenu img{
+	height:100px;
+	width: 100px;
+	border-radius: 100px;
+	margin-top: 20px;
+}
+.sidemenu h4{
+	font-weight: 600;
+}
+.sidemenu-toggle{
+	border: 1px solid white;
+	color: #777;
+	position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.sidemenu-toggle span{
+	background-color: white;
+}
+.sidemenu-item{
+	background-color: transparent;
+	border:none;
+	text-align: left;
+	
+}
+.sidemenu-itemheading{
+	border: none;
+	border-bottom: none;
+    color: white !important;
+    padding: 0 10px;
+    background-color: transparent !important;
+    transition: 0.4s;
+}
+.sidemenu-itemheading:hover{
+    background-color: #1E3245 !important;
+}
+.sidemenu-itemheading:hover h4{
+    color: white;
+}
+.sidemenu-itemheading .panel-title{
+	display: block;
+}
+
+.sidemenu-itemheading h4{
+	text-align: left;
+	color: white;
+}
+.panel-title.active{
+	background-color: #4E646F;
+}
+.sidemenu-itemheading a{
+	text-decoration: none;
+}
+.panel-body{
+	border-top: none !important;
+}
+
+.subitem{
+	width: 100%;
+	border-left: 2px solid white;
+	color: white;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	text-align: left;
+	border-radius: 0px;
+}
+.subitem:hover{
+	background-color: #334454;
+	color:white;
+}	
+.adminnav .collapse.in{
+	background-color: #334454;
+	transition: background-color 0.1s;
+
+}
+.adminnav .subitem a{
+	text-decoration: none;
+}
+@media screen and (max-width: 767px){
+.sidemenu{
+	height: auto;
+	padding-bottom: 5px;
+}
+}
+
+
+
+/*
+6. Account 
+----------------*/
+
+.accountbody{
+	background-color: white;
+	padding:20px;
+	margin-top: 5px;
+}
+
+.accountbody h2{
+	margin-bottom: 50px;
+	font-weight: 600;
+}
+
+.table-hover>tbody>tr:hover{
+	background-color: #F4FFFF;
+}
+.cart input[type=number]{
+	width: 50px;
+}
+
+
+/*7.Item Details Page
+----------------------------*/
+#itembody{
+	background-color: white;
+	padding: 20px;
+	margin-top: 5px;
+}
+#itemtitle{
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+#itemprice{
+	border-top: 1px solid #CCCCCC;
+	border-bottom:  1px solid #CCCCCC;
+	padding: 10px;
+}
+#itemquantity{
+	width: 30%;
+	height:40px;
+	padding-top:9px;
+	margin-right: -5px;
+	text-align: center;
+}
+#btn_bag{
+	width: 33%;
+	padding: 5px;
+	background-color: red;
+	color: white;
+	border:none;
+	margin-right: -5px;
+}
+#btn_addwish{
+	width: 33%;
+	padding: 5px;
+	background-color: green;
+	color: white;
+	border: none;
+}
+#fb_like{
+	background-color: #4267B2;
+	color: white;
+	border: none;
+	float: right;
+}
+#twitter-widget-0{
+	background-color: #1B95E0;
+	color: white;
+	border: none;
+	float: right;
+}
+.carousel-control{
+	background-image: none !important;
+}
+#sellerinfo{
+	margin-top: 10px;
+	border: 1px solid #CCCCCC;
+}
+#callnow{
+	padding: 5px 10px;
+	background-color: #2C85B6;
+	color: white;
+	border: none;
+	margin: 5px;
+}
+#msgbtn{
+	padding: 5px 10px;
+	background-color: #2C85B6;
+	color: white;
+	border: none;
+	margin: 5px;
+}
+.carousel-inner .item img{
+	height: 380px;
+}
+
+/*8.FORMS
+-------------------*/
+
+.inputError {
+	border: red;
+	box-shadow: inset 0 1px 1px red,0 0 8px red;
+	-webkit-box-shadow: inset 0 1px 1px red,0 0 8px red;
+}
+
+.peditimage{
+	width: 100%;
+	max-height: 250px;
+}
+
+/*9.Table Styling
+-------------------*/
+.status{
+	padding-top: 10px !important;
+	text-align: center;
+}
+.status .label{
+	font-weight: 400;
+}
+.addbtn{
+	margin: 10px;
+	float:right;
+}
+.btn-xs{
+	margin: 2px;
+}
+
+
+/*10.Shopping Bag
+-------------------*/
+
+.noitemmsg{
+	text-align: center;
+    padding: 50px;
+    background-color: #cccccc;
+    color: #f3f3f4;
+}
+
+.noitemmsg i{
+	font-size: 15em;
+}
+.noitemmsg h2{
+	font-weight: 800px;
+}
+.bagtotal h4{
+    float:right;
+}
+
+/*11. User Registration and Login
+-----------------------------------*/
+
+.floatform{
+    background-color: white;
+    margin: auto;
+    margin-top: 3%;
+    padding: 20px 50px;
+}
+.profileimage img{
+	width: 100px;
+	max-height: 250px;
+}
+
+/*12. Bill Page
+---------------*/
+
+#bill{
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#bill h2{
+	text-align: center;
+	font-weight: 800;
+}
+.billtotal h4{
+    float:right;
+}
+
+
+/*13. Footer
+--------------*/
+footer{
+	background-color: #2D3E50;
+	width: 100%;
+	color: white;
+	margin-top: 15px;
+}
+footer .container{
+	background-color: transparent;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+}
+.footerMenu{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.footerMenu li{
+	display: inline;
+	list-style: none;
+	font-weight: 600;
+	font-size: 16px;
+}
+.footerMenu li:after{
+	content: " | ";
+}
+.footerMenu li:last-child:after{
+	content: "";
+}
+footer li a:hover{
+	color: white;
+}
+.socialMedia{
+	float: right;
+}
+.socialMedia li{
+	display: inline;
+	list-style: none;
+}
+
+
+/*14. About Us Page
+-------------------*/
+
+.members{
+	background-color: #1BBC9B;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.members img{
+	border-radius: 100%;
+}
+
+.members h2, .members h3{
+	font-weight: 600;
+}
+.fricons{
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+}
+.fricons img{ 
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+.fricons img:hover{ 
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+}
