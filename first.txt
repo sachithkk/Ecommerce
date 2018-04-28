@@ -1,1 +1,2 @@
 this is first text file
+10*10 = 100
